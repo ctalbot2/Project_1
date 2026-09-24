@@ -23,4 +23,6 @@ for valid_unit, value in valid_units.items():
 while True:
     army_list = []
     total_points = 0
-    unit = input
+    unit = input("\nAdd a unit to your army list: ").lower()
+    if unit in valid_units:
+        army_list.append(unit)
