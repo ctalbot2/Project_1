@@ -18,6 +18,10 @@ valid_units = {
     "wave serpent": 120,
     "falcon": 130
 }
+battleline_units = [
+    "guardian defenders",
+    "storm guardians"
+]
 """
 this is the set of units you're allowed to add to your army.  each unit has a points cost defined in the game's rules
 """
@@ -41,7 +45,11 @@ while True:
     """
     unit = input("\nAdd a unit to your army list: ").lower()
     if unit in valid_units:
-        if total_points + valid_units[unit] <= 2000:
+        if unit not in battleline_units and army_list.count(unit) >= 3:
+            print(f"\nYou cannot add more than three {unit.title()} units.")
+        elif unit in battleline_units and army_list.count(unit) >= 6:
+            print(f"You cannot add more than six {unit.title()} units")
+        elif total_points + valid_units[unit] <= 2000:
             """
             checks total army points cost before adding to the army
             """
