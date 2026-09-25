@@ -39,9 +39,10 @@ while True:
     unit = input("\nAdd a unit to your army list: ").lower()
     if unit in valid_units:
         army_list.append(unit)
-        print(f"\nAdded unit: {unit}")
-
-    total_points = sum(valid_units[unit] for unit in army_list)
+        total_points = sum(valid_units[unit] for unit in army_list)
+        print(f"\nAdded unit: {unit.title()}")
+    else:
+        print("\nThat is not a valid unit.")
     """
     the bottom code helps with debugging
     """
