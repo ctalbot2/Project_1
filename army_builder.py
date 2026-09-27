@@ -2,9 +2,11 @@
 valid_units = {
     "farseer": 80,
     "autarch": 75,
+    "warlock": 40,
     "guardian defenders": 100,
     "storm guardians": 100,
     "dire avengers": 75,
+    "striking scorpions": 75,
     "howling banshees": 95,
     "dark reapers": 95,
     "swooping hawks": 95,
